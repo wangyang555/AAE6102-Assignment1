@@ -78,7 +78,7 @@ Decode navigation messages and extract ephemeris data.
 - **Opensky Navigation messages decoded**
 Navigation messages decoded for **9 satellites**
 <div align="center">
-  <img src="figure/Opensky/3_1_eph.png" alt="">
+  <img src="figure/Opensky/3_1_eph_message.png" alt="">
 </div>
 <div align="center">
   <img src="figure/Opensky/3_2_cn0.png" alt="">
@@ -109,9 +109,10 @@ Below I give the function model and Stochastic model of pseudorange and doppler 
 
 ### Results:  
 1. **Position Comparison:** Longitude/latitude vs. ground truth.
+
 **Opensky**
 <div align="center">
-  <img src="figure/Urban/4_1_opensky_wls_lat_lon.png" alt="">
+  <img src="figure/Opensky/4_1_opensky_wls_lat_lon.png" alt="">
 </div>
 
 **Urban**
@@ -120,9 +121,10 @@ Below I give the function model and Stochastic model of pseudorange and doppler 
 </div>
 
 2. **NEU Time Series:** Relative to epoch-averaged coordinates.
+
 **Opensky**
 <div align="center">
-  <img src="figure/Urban/4_2_opensky_wls_neu.png" alt="">
+  <img src="figure/Opensky/4_2_opensky_wls_neu.png" alt="">
 </div>
 
 **Urban**
@@ -131,9 +133,10 @@ Below I give the function model and Stochastic model of pseudorange and doppler 
 </div>
 
 3. **XYZ Velocity Time Series.**  
+
 **Opensky**
 <div align="center">
-  <img src="figure/Urban/4_3_opensky_wls_v.png" alt="">
+  <img src="figure/Opensky/4_3_opensky_wls_v.png" alt="">
 </div>
 
 **Urban**
@@ -153,7 +156,7 @@ Develop an EKF using pseudorange and Doppler measurements.
 1. **Position Comparison:** Longitude/latitude vs. ground truth.
 **Opensky**
 <div align="center">
-  <img src="figure/Urban/5_1_opensky_ekf_lat_lon.png" alt="">
+  <img src="figure/Opensky/5_1_opensky_ekf_lat_lon.png" alt="">
 </div>
 
 **Urban**
@@ -164,7 +167,7 @@ Develop an EKF using pseudorange and Doppler measurements.
 2. **NEU Time Series:** Relative to epoch-averaged coordinates.
 **Opensky**
 <div align="center">
-  <img src="figure/Urban/5_2_opensky_ekf_neu.png" alt="">
+  <img src="figure/Opensky/5_2_opensky_ekf_neu.png" alt="">
 </div>
 
 **Urban**
@@ -175,7 +178,7 @@ Develop an EKF using pseudorange and Doppler measurements.
 3. **XYZ Velocity Time Series.**  
 **Opensky**
 <div align="center">
-  <img src="figure/Urban/5_3_opensky_ekf_v.png" alt="">
+  <img src="figure/Opensky/5_3_opensky_ekf_v.png" alt="">
 </div>
 
 **Urban**

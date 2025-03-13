@@ -195,6 +195,6 @@ Develop an EKF using pseudorange and Doppler measurements.
 ---
 
 ## Note  
-The EKF was partially assisted by [**DeepSeek**](https://chat.deepseek.com/), an AI tool, for code optimization and debugging.  
+The EKF was partially assisted by [**DeepSeek**](https://chat.deepseek.com/), for code optimization and debugging.  
 
 

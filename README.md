@@ -3,7 +3,7 @@
 **Name:** WANG Yang  
 **Email:** 24041885r@connect.polyu.hk  
 
-This repository contains the implementation of **Assignment 1** for AAE6102 Satellite Communication and Navigation. The assignment includes 5 tasks, with the first three tasks processed using the open-source MATLAB project [FGI-GSRx](https://github.com/nlsfi/FGI-GSRx), and Tasks 4-5 implemented in Python. For Tasks 4-5, functions from the [rtklib-py](https://github.com/rtklibexplorer/rtklib-py) repository (e.g., ionospheric/tropospheric delay calculations) were utilized to develop **Weighted Least Squares (WLS)** and **Extended Kalman Filter (EKF)** algorithms for receiver position/velocity estimation. Feedback and discussions are welcome!
+This repository contains the implementation of Assignment 1 for AAE6102 Satellite Communication and Navigation. The assignment consists of 5 tasks. The first three tasks were completed using the open-source MATLAB project [FGI-GSRx](https://github.com/nlsfi/FGI-GSRx). For Tasks 4-5, I implemented the solutions in Python, utilizing some functions from the [rtklibexplorer/rtklib-py](https://github.com/rtklibexplorer/rtklib-py), such as ionospheric delay, tropospheric delay, and satellite position calculations. Based on these functions, I developed the **Weighted Least Squares (WLS)** and **Extended Kalman Filter (EKF)** algorithms to estimate the receiver's position and velocity using pseudorange and Doppler measurements. Feedback and discussions are welcome!
 
 ---
 
@@ -186,6 +186,15 @@ Develop an EKF using pseudorange and Doppler measurements.
   <img src="figure/Urban/5_3_urban_ekf_v.png" alt="">
 </div>
 
- 
+---
 
-For detailed equations and methodology, refer to the documentation in the repository.  
+## References  
+1. [FGI-GSRx](https://github.com/nlsfi/FGI-GSRx](https://github.com/nlsfi/FGI-GSRx)  
+2. [rtklibexplorer/rtklib-py](https://github.com/rtklibexplorer/rtklib-py](https://github.com/rtklibexplorer/rtklib-py)  
+
+---
+
+## Note  
+The EKF was partially assisted by [**DeepSeek**](https://chat.deepseek.com/), an AI tool, for code optimization and debugging.  
+
+

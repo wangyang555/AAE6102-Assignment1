@@ -10,7 +10,7 @@ This repository contains the implementation of **Assignment 1** for AAE6102 Sate
 ## Task 1 — Acquisition  
 Process IF data using a GNSS SDR and generate initial acquisition outputs.  
 
-The signal information of Opensky and Urban is as follows
+The signal information of Opensky and Urban is as follows：
 | Parameter              | Opensky           | Urban             |  
 |------------------------|-------------------|-------------------|  
 | **Carrier Frequency**  | 1575.42 MHz       | 1575.42 MHz       |  
@@ -20,42 +20,129 @@ The signal information of Opensky and Urban is as follows
 | **Ground Truth**       | (22.32844477, 114.17136300) | (22.3198722, 114.20910178) |  
 | **Data Length**        | 90 seconds        | 90 seconds        |  
 
-**Results:**  
+### Results  
 - **Opensky Signal acquisition results**
- (see Figures 1-3).  
-- **Urban:** Signal acquisition results (see Figures 1-3).  
+<div align="center">
+  <img src="figure/Opensky/1_1_freq_codephase_signal_search.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Opensky/1_2_codephase_signal_search.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Opensky/1_3_acquisition_result.png" alt="">
+</div>
+
+- **Urban Signal acquisition results**
+<div align="center">
+  <img src="figure/Urban/1_1_freq_codephase_signal_search.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Urban/1_2_codephase_signal_search.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Urban/1_3_acquisition_result.png" alt="">
+</div>
 
 ---
 
 ## Task 2 — Tracking  
 Adapt the tracking loop (DLL) to produce correlation plots and analyze tracking performance under urban interference.  
 
-### Key Observations:  
+### Results
+- **Opensky Signal tracking results**
+<div align="center">
+  <img src="figure/Opensky/2_1_tracking.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Opensky/2_2_correlation.png" alt="">
+</div>
+
+- **Urban Signal tracking results**
+<div align="center">
+  <img src="figure/Urban/2_1_tracking.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Urban/2_2_correlation.png" alt="">
+</div>
+
+### Analysis:  
 - **Opensky:** Correlation peaks exhibit a symmetrical triangular shape.  
-- **Urban:** Multipath effects and NLOS signals cause correlation peak distortions (e.g., multiple peaks, shifted/broadened main peaks), reducing code-phase measurement accuracy.  
+- **Urban:** Multipath effects and NLOS signals cause correlation peak distortions (e.g., multiple peaks, shifted/broadened main peaks) and affect the measurement accuracy of the code phase, reducing code-phase measurement accuracy.  
 
 ---
 
 ## Task 3 — Navigation Data Decoding  
 Decode navigation messages and extract ephemeris data.  
 
-### Results:  
-- **Opensky:** Navigation messages decoded for **9 satellites**.  
-- **Urban:** Navigation messages decoded for **4 satellites** (lower C/N₀ values due to urban interference).  
+### Results
+- **Opensky Navigation messages decoded**
+Navigation messages decoded for **9 satellites**
+<div align="center">
+  <img src="figure/Opensky/3_1_eph.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Opensky/3_2_cn0.png" alt="">
+</div>
+
+- **Urban Navigation messages decoded**
+Navigation messages decoded for **4 satellites** (lower C/N₀ values due to urban interference)
+<div align="center">
+  <img src="figure/Urban/3_1_eph.png" alt="">
+</div>
+<div align="center">
+  <img src="figure/Urban/3_2_cn0.png" alt="">
+</div>
 
 ---
 
 ## Task 4 — Position & Velocity Estimation (WLS)  
 Implement WLS using pseudorange measurements.  
 
-### Results:  
-#### Opensky Environment  
-1. **Position Comparison:** Longitude/latitude vs. ground truth.  
-2. **NEU Time Series:** Relative to epoch-averaged coordinates.  
-3. **XYZ Velocity Time Series.**  
+### Model:
+Below I give the function model and Stochastic model of pseudorange and doppler observations. For more information, please refer to the file under document.
+<div align="center">
+  <img src="document/img_for_github/Pseudorange.png" alt="">
+</div>
+<div align="center">
+  <img src="document/img_for_github/doppler.png" alt="">
+</div>
 
-#### Urban Environment  
-- **Lower Accuracy:** Fewer tracked satellites and unmitigated multipath effects (e.g., reflections from glass surfaces).  
+### Results:  
+1. **Position Comparison:** Longitude/latitude vs. ground truth.
+**Opensky**
+<div align="center">
+  <img src="figure/Urban/4_1_opensky_wls_lat_lon.png" alt="">
+</div>
+
+**Urban**
+<div align="center">
+  <img src="figure/Urban/4_1_urban_wls_lat_lon.png" alt="">
+</div>
+
+2. **NEU Time Series:** Relative to epoch-averaged coordinates.
+**Opensky**
+<div align="center">
+  <img src="figure/Urban/4_2_opensky_wls_neu.png" alt="">
+</div>
+
+**Urban**
+<div align="center">
+  <img src="figure/Urban/4_2_urban_wls_neu.png" alt="">
+</div>
+
+3. **XYZ Velocity Time Series.**  
+**Opensky**
+<div align="center">
+  <img src="figure/Urban/4_3_opensky_wls_v.png" alt="">
+</div>
+
+**Urban**
+<div align="center">
+  <img src="figure/Urban/4_3_urban_wls_v.png" alt="">
+</div>
+
+### Analysis:  
+It can be seen that in the Urban environment, the accuracy is significantly lower than that in the Opensky environment. On the one hand, there are fewer satellites tracked in the Urban environment. On the other hand, the pseudorange does not take into account the impact of multipath. Complex reflective surfaces in the Urban environment, such as glass curtain walls, cause serious multipath interference, which has a more obvious negative impact on positioning.
 
 ---
 
@@ -67,8 +154,6 @@ Develop an EKF using pseudorange and Doppler measurements.
 
 ---
 
-## Notes  
-- Figures referenced in the original document (e.g., "Figure.1") are placeholders. Actual figures will be added to the repository.  
-- Code implementations and configuration files will be uploaded separately.  
+ 
 
 For detailed equations and methodology, refer to the documentation in the repository.  

@@ -189,8 +189,8 @@ Develop an EKF using pseudorange and Doppler measurements.
 ---
 
 ## References  
-1. [FGI-GSRx](https://github.com/nlsfi/FGI-GSRx](https://github.com/nlsfi/FGI-GSRx)  
-2. [rtklibexplorer/rtklib-py](https://github.com/rtklibexplorer/rtklib-py](https://github.com/rtklibexplorer/rtklib-py)  
+1. [FGI-GSRx](https://github.com/nlsfi/FGI-GSRx)  
+2. [rtklibexplorer/rtklib-py](https://github.com/rtklibexplorer/rtklib-py)  
 
 ---
 

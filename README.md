@@ -21,7 +21,8 @@ The signal information of Opensky and Urban is as follows
 | **Data Length**        | 90 seconds        | 90 seconds        |  
 
 **Results:**  
-- **Opensky:** Signal acquisition results (see Figures 1-3).  
+- **Opensky Signal acquisition results**
+ (see Figures 1-3).  
 - **Urban:** Signal acquisition results (see Figures 1-3).  
 
 ---
